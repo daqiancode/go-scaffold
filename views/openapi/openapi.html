@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.18.3/swagger-ui.css"> -->
+    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swagger-ui-dist@4/swagger-ui.css">
+    <title>go-scaffold API</title>
+</head>
+
+<body>
+    <div id="swagger-ui">
+    </div>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.18.3/swagger-ui-bundle.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/swagger-ui-dist@4/swagger-ui-bundle.js"></script>
+    <!-- `SwaggerUIBundle` is now available on the page -->
+    <script>
+        const ui = SwaggerUIBundle({
+            url: "/openapi/json",
+            "dom_id": "#swagger-ui",
+            "layout": "BaseLayout",
+            "deepLinking": true,
+            "showExtensions": true,
+            "showCommonExtensions": true,
+            oauth2RedirectUrl: window.location.origin + '/openapi/oauth2-redirect',
+            presets: [
+                SwaggerUIBundle.presets.apis,
+                SwaggerUIBundle.SwaggerUIStandalonePreset
+            ],
+        })
+        //https://github.com/swagger-api/swagger-ui/blob/master/docs/usage/oauth2.md
+        ui.initOAuth({
+            clientId: "{{clientId}}",
+            clientSecret: "{{clientSecret}}",
+            // realm: "your-realms",
+            // appName: "your-app-name",
+            // scopeSeparator: " ",
+            scopes: "*",
+            // additionalQueryStringParams: {test: "hello"},
+            // useBasicAuthenticationWithAccessCodeGrant: true,
+            // usePkceWithAuthorizationCodeGrant: true
+        })
+    </script>
+</body>
+
+</html>

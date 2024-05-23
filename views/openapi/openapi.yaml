@@ -1,0 +1,41 @@
+openapi: 3.0.3
+info:
+  title: "go-scaffold API"
+  version: "1.0.0"
+  description: "go-scaffold API"
+servers:
+  - url: "/v1"
+    description: "v1"
+  - url: "/"
+    description: "noversion"
+paths:
+  /health:
+    get:
+      summary: "Health check"
+      description: "Health check"
+      responses:
+        '200':
+          description: "OK"
+
+components:
+  securitySchemes:
+    OAuth2:
+      type: oauth2
+      flows:
+        authorizationCode:
+          authorizationUrl: "{{.AuthorizationUrl}}"
+          tokenUrl: "{{.TokenUrl}}"
+          # scopes:
+          #   read: "Read access"
+          #   write: "Write access"
+    X-IAM-AUTH-SIGNATURE:
+      type: apiKey
+      in: header
+      name: X-IAM-AUTH-SIGNATURE
+    X-IAM-API-KEY:
+      type: apiKey
+      in: header
+      name: X-IAM-API-KEY
+  schemas:
+    
+    
