@@ -6,8 +6,8 @@ golang microservice scaffold
 git clone https://github.com/daqiancode/go-scaffold.git
 move go-scaffold your_project_name
 code your_project_name
-replaceall go-scaffold to your_project_name
 rm -rf .git
+replaceall go-scaffold to your_project_name
 ```
 
 ## Dependencies
