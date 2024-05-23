@@ -3,14 +3,15 @@ info:
   title: "go-scaffold API"
   version: "1.0.0"
   description: "go-scaffold API"
-servers:
-  - url: "/v1"
-    description: "v1"
-  - url: "/"
-    description: "noversion"
+# servers:
+#   - url: "/"
+#     description: "noversion"
+#     - url: "/v1"
+#     description: "v1"
 paths:
   /health:
     get:
+      tags: ["System"]
       summary: "Health check"
       description: "Health check"
       responses:

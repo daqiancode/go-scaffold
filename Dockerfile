@@ -11,17 +11,13 @@ COPY views ./views
 COPY emails ./emails
 COPY main.go ./main.go
 
-RUN go build -o iam
-RUN go build -o initdb ./bin/initdb/
-RUN go build -o initdata ./bin/initdata/
+RUN go build -o go-scaffold
 
 
 FROM alpine:3.19.1
 
 WORKDIR /
-COPY --from=builder /app/iam /iam
-COPY --from=builder /app/initdb /initdb
-COPY --from=builder /app/initdata /initdata
+COPY --from=builder /app/go-scaffold /go-scaffold
 COPY .env /.env
 COPY emails /emails
 COPY static /static

@@ -1,0 +1,54 @@
+version: '3.8'
+
+services:
+  iam:
+    build: .
+    environment:
+      IAM_HOST: http://localhost:8080
+      MYSQL_URL: root:123456@tcp(mysql:3306)/iam?charset=utf8&parseTime=True&loc=Local
+      REDIS_ADDR: redis:6379
+      S3_ENDPOINT: minio:9000
+    ports:
+      - "8080:8080"
+    networks:
+      - local
+    restart: on-failure
+    depends_on:
+      - redis
+      - mysql
+      - minio
+    links:
+      - redis
+      - mysql
+      - minio
+  redis:
+    image: redis:latest
+    ports:
+      - "6378:6379"
+    networks:
+      - local
+  mysql:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+      MYSQL_DATABASE: iam
+    ports:
+      - "3305:3306"
+    networks:
+      - local
+  minio:
+    image: bitnami/minio:latest
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    environment:
+      MINIO_ROOT_USER: cbt-2024
+      MINIO_ROOT_PASSWORD: cbt-2024
+      MINIO_ACCESS_KEY: YjQBJk4wH6JjQQfxEhmh
+      MINIO_SECRET_KEY: 5oPz2Mpfia3JISEWQHI3Nwd8rXMaOnXOhAkUW2Hl
+    networks:
+      - local
+    
+networks:
+  local:
+    driver: bridge
