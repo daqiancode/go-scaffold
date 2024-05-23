@@ -1,6 +1,14 @@
 # go-scaffold
 golang microservice scaffold
 
+## Usage
+```shell
+git clone https://github.com/daqiancode/go-scaffold.git
+move go-scaffold your_project_name
+code your_project_name
+replaceall go-scaffold to your_project_name
+git remote set-url origin your_project_git_url
+```
 
 ## Dependencies
 - Web: iris
