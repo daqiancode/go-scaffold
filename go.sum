@@ -31,6 +31,8 @@ github.com/daqiancode/gormx v0.0.0-20240306090226-3a6575ccffde h1:xsKiN/eXEzrEQ7
 github.com/daqiancode/gormx v0.0.0-20240306090226-3a6575ccffde/go.mod h1:CQk3ZNVN4cc3S/tnZkwNrN6fG8nzqCxSKVrPN2ACq9Q=
 github.com/daqiancode/myutils v0.0.0-20240523080527-4f0af8d4e860 h1:CGBNDz9T79NJgtetw3rfgQE6WjSDZBok6ZtuEdYVLjo=
 github.com/daqiancode/myutils v0.0.0-20240523080527-4f0af8d4e860/go.mod h1:eQ+1IdVoSkpWHbgw4+F3w/KXy55r7Ov40rrFhWl8lSM=
+github.com/daqiancode/scache v0.0.0-20240324065124-037b08ccf689 h1:wCkzVFwj4+y5FSEizpZUUXcCby4a4Jo+VejObqvNmYE=
+github.com/daqiancode/scache v0.0.0-20240324065124-037b08ccf689/go.mod h1:CjYP9iXJ0pxTiED8arK/M3YKkJtUw8/DII3d6E3lQwA=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
@@ -136,6 +138,8 @@ github.com/mitchellh/go-wordwrap v1.0.1 h1:TLuKupo69TCn6TQSyGxwI1EblZZEsQ0vMlAFQ
 github.com/mitchellh/go-wordwrap v1.0.1/go.mod h1:R62XHJLzvMFRBbcrT7m7WgmE1eOyTSsCt+hzestvNj0=
 github.com/modern-go/concurrent v0.0.0-20180228061459-e0a39a4cb421 h1:ZqeYNhU3OHLH3mGKHDcjJRFFRrJa6eAM5H+CtDdOsPc=
 github.com/modern-go/concurrent v0.0.0-20180228061459-e0a39a4cb421/go.mod h1:6dJC0mAP4ikYIbvyc7fijjWJddQyLn8Ig3JB5CqoB9Q=
+github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd h1:TRLaZ9cD/w8PVh93nsPXa1VrQ6jlwL5oN8l14QlcNfg=
+github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd/go.mod h1:6dJC0mAP4ikYIbvyc7fijjWJddQyLn8Ig3JB5CqoB9Q=
 github.com/modern-go/reflect2 v1.0.2 h1:xBagoLtFs94CBntxluKeaWgTMpvLxC4ur3nMaC9Gz0M=
 github.com/modern-go/reflect2 v1.0.2/go.mod h1:yWuevngMOJpCy52FWWMvUC8ws7m/LJsjYzDa0/r8luk=
 github.com/nats-io/nats.go v1.34.1 h1:syWey5xaNHZgicYBemv0nohUPPmaLteiBEUT6Q5+F/4=
