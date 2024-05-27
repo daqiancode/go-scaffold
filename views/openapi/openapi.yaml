@@ -17,6 +17,20 @@ paths:
       responses:
         '200':
           description: "OK"
+  /v1/user:
+    post:
+      tags: ["User"]
+      summary: "Create user"
+      description: "Create user"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/UserPost"
+      responses:
+        '200':
+          description: "OK"
 
 components:
   securitySchemes:
@@ -38,5 +52,23 @@ components:
       in: header
       name: X-IAM-API-KEY
   schemas:
+    UserPost:
+      type: object
+      properties:
+        name:
+          type: string
+          description: "User name"
+        email:
+          type: string
+          description: "User email"
+        age:
+          type: integer
+          description: "User age"
+        password:
+          type: string
+          description: "User password"
+      required:
+        - name
+        - age
     
     
